@@ -8,7 +8,7 @@
   ],
   "id": "dnd-embervault",
   "name": "余烬金库",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "D&D 2024 中文原创短冒险：矿主封了矿，说是有瓦斯；封矿的工人一个都没回来。3 章 15 节点 4 结局，约 3 小时，3–5 人，含一场可自动结算的遭遇。",
   "plugin_type": "content-pack",
   "content_profile": "adventure-module",
@@ -36,6 +36,11 @@
     ],
     "map_locations": [
       "maps/locations/*.json"
+    ]
+  },
+  "requires": {
+    "rulesets": [
+      { "id": "core:dnd2024" }
     ]
   },
   "docs": "README.md"
