@@ -1,0 +1,17 @@
+{
+  "id": "mine_gate",
+  "name": "矿口",
+  "world_id": "ashfell_ember",
+  "connected_to": [
+    "tavern",
+    "hall"
+  ],
+  "content": "铁门焊死，白漆「瓦斯·勿近」下压矮人符文「欠债未清」。木箱七盏矿灯六盏空。",
+  "keywords": [
+    "矿口",
+    "铁门",
+    "矿灯",
+    "符文"
+  ],
+  "tier": "core"
+}

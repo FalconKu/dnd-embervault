@@ -1,0 +1,14 @@
+{
+  "locale_schema_version": 1,
+  "locale": "zh-CN",
+  "target": {
+    "kind": "adventure",
+    "id": "embervault"
+  },
+  "fields": {
+    "tutorial": {
+      "name": "余烬金库",
+      "summary": "矿封了三个月，矿主说是瓦斯。封矿的七个工人只回来一个，而他只肯数自己的手指。"
+    }
+  }
+}

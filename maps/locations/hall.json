@@ -1,0 +1,17 @@
+{
+  "id": "hall",
+  "name": "旧矿厅",
+  "world_id": "ashfell_ember",
+  "connected_to": [
+    "mine_gate",
+    "forge_shaft"
+  ],
+  "content": "主巷道尽头开阔，六个人形灰壳推同一辆矿车来回。银油灯照过去它们停半秒。",
+  "keywords": [
+    "矿厅",
+    "灰壳",
+    "矿车",
+    "炭火"
+  ],
+  "tier": "core"
+}

@@ -1,0 +1,450 @@
+{
+  "schema_version": 2,
+  "kind": "adventure",
+  "id": "embervault",
+  "format": "diceframe:adventure-graph-v2",
+  "source_ref": "diceframe-original:dnd-embervault",
+  "automation_level": "guided",
+  "name": "余烬金库",
+  "summary": "矿封了三个月，矿主说是瓦斯。封矿的七个工人只回来一个，而他只肯数自己的手指。",
+  "estimated_minutes": 180,
+  "player_count": 4,
+  "recommended_level": 3,
+  "chapters": [
+    {
+      "id": "offer",
+      "name": "第一章：断镐酒馆"
+    },
+    {
+      "id": "descent",
+      "name": "第二章：下矿"
+    },
+    {
+      "id": "ledger",
+      "name": "第三章：清账"
+    }
+  ],
+  "start_node_ids": [
+    "the_offer"
+  ],
+  "nodes": [
+    {
+      "id": "the_offer",
+      "type": "decision",
+      "chapter_id": "offer",
+      "visibility": "public",
+      "name": "断镐酒馆的价码",
+      "description": "断镐酒馆，下午。炉子烧得旺，屋里还是冷。\n\n矿主布伦·铁砧把一袋银币推过来，说得很干脆：下矿，找到封矿那天没上来的六个人，把「账」结掉，铁门就能重开。\n\n他不说「账」是什么。被追问时他说：「矮人的规矩。我接手的时候就这样。」\n\n吧台后面，玛拉在擦杯子，擦到同一个位置擦了十几下。\n\n角落里的老奥托突然插话：「别刻名字。刻了就换你。」\n\n布伦没回头，只说：「他吓着了。」\n\n然后他补了一句你们没料到的话：「他们六个不是死了。我下去看过。他们还在干活。」\n\n（布伦知道得比他说的多。他不是坏人，他只是第六年不想再挑人了。）",
+      "transitions": [
+        {
+          "to": "tavern_talk",
+          "choice_id": "talk_to_otto",
+          "choice_label": "先去角落找老奥托谈"
+        },
+        {
+          "to": "town_clerk",
+          "choice_id": "visit_the_clerk",
+          "choice_label": "先去镇务所查契约"
+        },
+        {
+          "to": "the_sealed_gate",
+          "choice_id": "go_straight_to_mine",
+          "choice_label": "拿钱就走，直接下矿"
+        }
+      ],
+      "choice_mode": "exclusive"
+    },
+    {
+      "id": "the_sealed_gate",
+      "type": "decision",
+      "chapter_id": "descent",
+      "visibility": "public",
+      "name": "焊死的铁门",
+      "description": "矿口的铁门被焊死，碎石堆到腰高。白漆写着「瓦斯·勿近」，白漆下面压着一行矮人符文：「欠债未清」。\n\n门缝里吹出的风是热的，带着铁锈和炭的味道。三个月了，矿里还在烧。\n\n旁边的木箱里码着七盏矿灯。六盏已经空了。最后一盏还剩半罐银色灯油——那是奥托的灯。\n\n铁门下方的碎石有新翻动的痕迹。有人从里面搬开过石头，又堆了回去。\n\n（用银油灯照门缝，能看见门内地上有一串脚印：六双，全部朝矿里，只有一双朝外。）",
+      "transitions": [
+        {
+          "to": "mine_map",
+          "choice_id": "study_the_map",
+          "choice_label": "先看矿道图，找一条安全路线"
+        },
+        {
+          "to": "shaft_descent",
+          "choice_id": "break_the_seal",
+          "choice_label": "直接破门，沿主巷道走"
+        }
+      ],
+      "choice_mode": "exclusive"
+    },
+    {
+      "id": "the_cinder_hall",
+      "type": "encounter",
+      "chapter_id": "descent",
+      "visibility": "public",
+      "name": "推车的灰壳",
+      "description": "主巷道尽头是一处开阔的旧矿厅，六个人形灰壳正在推同一辆矿车，来回推了三个月。它们胸腔里各有一点炭火，动作整齐，没有声音。银油灯照过去时，它们停了半秒——像工人听见工头的脚步。矿车后面就是通往熔炉的斜井。",
+      "encounter_ref": "encounter_profile:cinder_wights",
+      "transitions": [
+        {
+          "to": "the_forge"
+        }
+      ]
+    },
+    {
+      "id": "the_forge",
+      "type": "scene",
+      "chapter_id": "descent",
+      "visibility": "public",
+      "name": "炉壁上的名字",
+      "description": "斜井通往余烬厅的核心：一座还在烧的矮人熔炉。\n\n炉壁刻满名字，从一百二十年前排到今年，一圈一圈往上叠，最新的在最下面。今年的位置有六个新刻的名字，字迹是灰壳自己划的——歪，但很用力。\n\n熔炉边有一块拳头大的黑炭，对着火光能看见炭里有字。\n\n炉前坐着一具黑石与铁条构成的守卫，胸口嵌着一枚符文。它没有动，但你们知道它醒了。\n\n炉壁上还有第七个空位，已经被划了线，等着刻。\n\n（那个空位的尺寸，正好是一个人类名字的宽度。布伦封矿那天，本来是打算自己下来的。）",
+      "transitions": [
+        {
+          "to": "the_ledger"
+        }
+      ]
+    },
+    {
+      "id": "the_ledger",
+      "type": "decision",
+      "chapter_id": "ledger",
+      "visibility": "public",
+      "name": "清账的三个办法",
+      "description": "守炉者只对「持契约者」让步。它不攻击，只是坐着，等一个说法。\n\n四条路：\n\n一，带镇务官的旧契约副本回来，重立规矩。契约原文写的是「一名」——矮人符文里，「名」既可指人，也可指字。\n二，把名字之炭投进炉里，熄掉它。\n三，按金库的规矩，把一个人的名字刻上炉壁，账就算清。\n四，什么都不做，退出矿道，让布伦继续封着。\n\n炉火在等。灰壳在门外停着，推车的声音停了，像下班的工人听见了钟。\n\n谁也没有催你们。",
+      "choice_mode": "exclusive",
+      "transitions": [
+        {
+          "to": "ending_quench",
+          "choice_id": "quench_the_coal",
+          "choice_label": "把名字之炭投进炉里"
+        },
+        {
+          "to": "ending_contract",
+          "choice_id": "renew_the_contract",
+          "choice_label": "用旧契约重立规矩"
+        },
+        {
+          "to": "ending_name",
+          "choice_id": "carve_a_name",
+          "choice_label": "刻上一个人的名字"
+        },
+        {
+          "to": "ending_wait",
+          "choice_id": "walk_away",
+          "choice_label": "退出去，让它继续封着"
+        }
+      ]
+    },
+    {
+      "id": "ending_quench",
+      "type": "ending",
+      "chapter_id": "ledger",
+      "visibility": "public",
+      "name": "结局：炉冷",
+      "description": "名字之炭落进炉膛，火没有爆，只是慢慢矮下去，最后缩成一点红。炉壁上的名字一个个暗掉，灰壳同时停住，然后散成普通的灰。矿脉的支撑柱在同一夜开始响。灰砧镇的债清了，矿也废了——这个冬天会很难，但明年开春，没人再需要数自己的手指。",
+      "transitions": []
+    },
+    {
+      "id": "ending_contract",
+      "type": "ending",
+      "chapter_id": "ledger",
+      "visibility": "public",
+      "name": "结局：重立的一年",
+      "description": "塞德里克的旧契约副本被摊在炉前，守炉者单膝跪下。新条款写得很清楚：每年清账一次，由镇子自己送名字下来，不再等金库来讨。六个灰壳被允许「下班」，玛拉把他们的名字刻在酒馆的断镐下面。矿重开了。第二年秋天，镇上开始有人自愿报名——不是被选，是自愿。",
+      "transitions": []
+    },
+    {
+      "id": "ending_name",
+      "type": "ending",
+      "chapter_id": "ledger",
+      "visibility": "public",
+      "name": "结局：炉壁上的第七个名字",
+      "description": "你们中的一个把名字刻上炉壁，刻痕发红，然后熄灭。炉火稳稳地烧起来，灰壳退回巷道继续推车。矿主在矿口等着，看到你们少了一个人，什么也没问，只把银币加了一倍。灰砧镇这个冬天过得很好。每年这一天，熔炉里都会有人念一遍那个名字，念得很轻，像在点名。",
+      "transitions": []
+    },
+    {
+      "id": "tavern_talk",
+      "type": "decision",
+      "chapter_id": "offer",
+      "visibility": "public",
+      "name": "老奥托的七根手指",
+      "description": "老奥托坐在角落，桌上刻着七道划痕。他数手指，从左到右，数到七，停住，重新开始。\n\n他不肯下矿，但肯说话，前提是你们先喝一杯。\n\n他说的话断断续续：\n「七个人下去。六个还在推车。」\n「他们不累。他们也不看我。」\n「我上来了，是因为我没刻名字。他们刻了。」\n「刻了名字，炉子就认你了。认了你，你就得一直上班。」\n\n问他为什么数到七，他说：「我数他们。数到七就该有七个人。可只有我一个。」\n\n（他其实在数「还有几个没下来」。第七个是他自己。）",
+      "transitions": [
+        {
+          "to": "otto_descent",
+          "choice_id": "ask_otto_to_lead",
+          "choice_label": "说服老奥托带路"
+        },
+        {
+          "to": "town_clerk",
+          "choice_id": "go_to_clerk",
+          "choice_label": "先去镇务所"
+        },
+        {
+          "to": "the_sealed_gate",
+          "choice_id": "go_directly",
+          "choice_label": "不拖了，直接去矿口"
+        }
+      ],
+      "choice_mode": "exclusive"
+    },
+    {
+      "id": "town_clerk",
+      "type": "scene",
+      "chapter_id": "offer",
+      "visibility": "public",
+      "name": "五份契约",
+      "description": "镇务所里，塞德里克·石足把五份羊皮纸摊在桌上，一份一份指给你们看。\n\n五份的「清账方式」一栏写法都不同，最要命的是第五份——最旧的那份，字迹最古，用矮人符文写。\n\n「一名。名者，人亦可，字亦可。」\n\n塞德里克用指甲敲着那个「名」字：「符文里这是个会意字。上面是口，下面是刻。既指被叫出来的人，也指被刻下来的字。」\n\n他补了一句：「一百二十年，没人这么读过。大家都按第一份办。」\n\n他愿意把副本给你们，条件是：如果你们要重立规矩，让他署名。\n\n（这是全场的第三条路：不交人，交名字。把六个死者的名字刻全，账也算清。）",
+      "transitions": [
+        {
+          "to": "the_sealed_gate"
+        }
+      ]
+    },
+    {
+      "id": "mine_map",
+      "type": "decision",
+      "chapter_id": "descent",
+      "visibility": "public",
+      "name": "矿道图",
+      "description": "矿口的值班室里有一张矿道图，羊皮，边角烧过。\n\n主巷道通向旧矿厅，从旧矿厅分出三条支线：一条通熔炉斜井，一条通通风竖井，一条在图上画到一半就断了——断口处有人用炭笔写了「别去」。\n\n通风竖井能绕到熔炉背面，避开灰壳。代价是竖井窄，只能侧身过，且有一段是垂直的。\n\n图上还有用红笔标的三个圈：灰壳推车的位置、熔炉的位置、以及「第七个空位」的位置。\n\n（如果玩家注意到那个「别去」：那条支线通向矿脉最深处，那里有一块石碑，刻着矮人离开时的原话。看到石碑的人会明白：矮人不是走了，是被自己的规矩赶走的。）",
+      "transitions": [
+        {
+          "to": "the_cinder_hall",
+          "choice_id": "main_tunnel",
+          "choice_label": "走主巷道，正面过去"
+        },
+        {
+          "to": "vent_bypass",
+          "choice_id": "take_the_vent",
+          "choice_label": "走通风竖井，绕到背面"
+        }
+      ],
+      "choice_mode": "exclusive"
+    },
+    {
+      "id": "shaft_descent",
+      "type": "scene",
+      "chapter_id": "descent",
+      "visibility": "public",
+      "name": "斜井",
+      "description": "破开铁门，主巷道比想象中干。地上有灰，灰上有脚印：六双朝里，一双朝外。\n\n走了约二百尺，温度开始升。空气里有一股甜味，像烧焦的蜜。\n\n主巷道尽头是旧矿厅。你们能听见声音了——不是回声，是金属摩擦石头的声音，有节奏，来回，来回。\n\n再往前，就该看见它们了。\n\n（如果玩家选择走通风竖井：需要一次体操检定，失败则卡住，掉 1d4 钝击伤害，且被灰壳听见。）",
+      "transitions": [
+        {
+          "to": "the_cinder_hall"
+        }
+      ]
+    },
+    {
+      "id": "ending_wait",
+      "type": "ending",
+      "chapter_id": "ledger",
+      "visibility": "public",
+      "name": "结局：继续封着",
+      "description": "你们退出矿道，铁门重新焊上，碎石堆回去。\n\n布伦在矿口等着，看见你们空手出来，什么也没问。他把银币收回去一半，说：「一半是跑腿费。」\n\n这个冬天很难。高炉只开一座，商队没来，镇上开始有人搬走。开春时，人口从三百二十降到二百七。\n\n第二年秋天，矿脉自己塌了一段。没有伤人，但矿口彻底堵死。\n\n布伦没有再来找过你们。听说他把矿卖给了外地一个商行，价钱很低。\n\n（这个结局什么也没解决。账还在，只是被埋得更深了。守秘人应当如实描述，不要加评判——但可以让玛拉在结尾说一句：「那六个人还在下面推车呢。」）",
+      "transitions": []
+    },
+    {
+      "id": "vent_bypass",
+      "type": "scene",
+      "chapter_id": "descent",
+      "visibility": "public",
+      "name": "竖井背面",
+      "description": "通风竖井只容侧身，爬上四十尺，再从一道裂缝挤进熔炉背面。\n\n背面是炉子的另一侧：砖砌的拱，砖缝里塞着灰，灰里有东西——指甲、头发、一小截布条。\n\n从这里能听见炉前的声音：守炉者的呼吸很慢，像风箱；灰壳的推车声在远处，来回，来回。\n\n最要紧的发现：炉背有一块砖是松的。抽出来，里面是一个巴掌大的凹槽，凹槽里放着一本小册子——矮人留下的操作手册，最后一页写着：「若炉火失衡，可断其供，勿断其名。」\n\n（这句话是第四条路的线索：炉火可以「断供」，但名字不能断。断供 = 熄炉，断名 = 抹掉所有记录。）",
+      "transitions": [
+        {
+          "to": "the_forge"
+        }
+      ]
+    },
+    {
+      "id": "otto_descent",
+      "type": "scene",
+      "chapter_id": "offer",
+      "visibility": "public",
+      "name": "老奥托带路",
+      "description": "要老奥托下矿，需要一次说服检定（DC 15），或拿出那半罐银色灯油。\n\n他答应得很勉强，一路上话很少。走到矿口时他停住，说了一件此前没说过的事：\n\n「那天我走在最后。他们六个在前面，一个一个刻名字。刻完就往回走，走到推车的地方，就开始推。」\n\n「我问我哥，你干啥。他说，上班。」\n\n「他没回头看我。他一直看着车。」\n\n他愿意带你们走到旧矿厅，但不会再往里走。他说：「我在门口等。你们要是听见我叫你们，别应。」\n\n（如果玩家问「为什么」，他说：「因为那时候叫你们的，不是我。」）",
+      "transitions": [
+        {
+          "to": "the_sealed_gate"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "find_six",
+      "name": "找到封矿那天没上来的六个人",
+      "visibility": "public",
+      "node_ids": [
+        "tavern_talk",
+        "the_cinder_hall"
+      ]
+    },
+    {
+      "id": "understand_debt",
+      "name": "弄清「账」是什么",
+      "visibility": "public",
+      "node_ids": [
+        "town_clerk",
+        "the_forge",
+        "the_ledger"
+      ]
+    },
+    {
+      "id": "settle_debt",
+      "name": "决定怎么清这笔账",
+      "visibility": "public",
+      "node_ids": [
+        "the_ledger"
+      ]
+    },
+    {
+      "id": "learn_otto",
+      "name": "让老奥托说出那天发生了什么",
+      "visibility": "public",
+      "node_ids": [
+        "tavern_talk",
+        "otto_descent"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "id": "heard_otto",
+      "name": "听完老奥托的话",
+      "visibility": "public",
+      "node_ids": [
+        "tavern_talk"
+      ]
+    },
+    {
+      "id": "read_five_contracts",
+      "name": "读到第五份契约的「名」字",
+      "visibility": "public",
+      "node_ids": [
+        "town_clerk"
+      ]
+    },
+    {
+      "id": "saw_shells",
+      "name": "看见还在推车的灰壳",
+      "visibility": "public",
+      "node_ids": [
+        "the_cinder_hall"
+      ]
+    },
+    {
+      "id": "saw_empty_slot",
+      "name": "看见炉壁上的第七个空位",
+      "visibility": "public",
+      "node_ids": [
+        "the_forge"
+      ]
+    },
+    {
+      "id": "made_choice",
+      "name": "在炉前做出决定",
+      "visibility": "public",
+      "node_ids": [
+        "the_ledger"
+      ]
+    },
+    {
+      "id": "found_manual",
+      "name": "在炉背找到矮人操作手册",
+      "visibility": "public",
+      "node_ids": [
+        "vent_bypass"
+      ]
+    }
+  ],
+  "world_seed": {
+    "entities": [
+      {
+        "entity_id": "location:mine_gate",
+        "kind": "location"
+      },
+      {
+        "entity_id": "location:ember_hall",
+        "kind": "location"
+      },
+      {
+        "entity_id": "npc:bren_ironanvil",
+        "kind": "npc"
+      },
+      {
+        "entity_id": "location:tavern",
+        "kind": "location"
+      },
+      {
+        "entity_id": "location:townhall",
+        "kind": "location"
+      },
+      {
+        "entity_id": "location:shaft",
+        "kind": "location"
+      },
+      {
+        "entity_id": "npc:mara",
+        "kind": "npc"
+      },
+      {
+        "entity_id": "npc:clerk",
+        "kind": "npc"
+      },
+      {
+        "entity_id": "item:contract_copy",
+        "kind": "item"
+      },
+      {
+        "entity_id": "item:name_coal",
+        "kind": "item"
+      }
+    ],
+    "relations": [
+      {
+        "relation_id": "gate-to-hall",
+        "kind": "connects",
+        "from_ref": "location:mine_gate",
+        "to_ref": "location:ember_hall"
+      }
+    ],
+    "facts": [
+      {
+        "key": "public:ledger.rule",
+        "value": "余烬厅每年需要一次「清账」：把当年死者的名字刻上炉壁，金库替全镇代付欠债。",
+        "visibility": "public"
+      },
+      {
+        "key": "gm:miners.fate",
+        "value": "六个矿工不是死于瓦斯，是被金库「留」下来当账本：他们自愿刻名，因为不刻全镇欠债翻倍。奥托没刻，所以活着回来，但他知道自己是逃的。",
+        "visibility": "gm"
+      },
+      {
+        "key": "gm:warden.rule",
+        "value": "守炉者只服从持契约者。若玩家伪造契约，它会在第三句话时识破并直接攻击；若拿真契约，它会跪。",
+        "visibility": "gm"
+      },
+      {
+        "key": "gm:wordplay",
+        "value": "矮人符文的「名」是会意字（口+刻），既指人，也指字。第五份契约因此允许「交名字」而非「交人」。",
+        "visibility": "gm"
+      },
+      {
+        "key": "gm:shells.alive",
+        "value": "六个灰壳不是死者，是被炉火认领的工人，还在重复上班的动作；它们不主动攻击。",
+        "visibility": "gm"
+      },
+      {
+        "key": "gm:bren.was_next",
+        "value": "炉壁第七个空位的宽度是给布伦留的；他封矿是为了拖，而不是为了逃。",
+        "visibility": "gm"
+      },
+      {
+        "key": "gm:mara.son",
+        "value": "玛拉的丈夫是六年前被清账的人之一，梁上断镐的第一个被磨平的名字就是他。",
+        "visibility": "gm"
+      }
+    ],
+    "processes": []
+  }
+}

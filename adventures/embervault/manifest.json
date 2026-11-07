@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "adventure_id": "plugin:embervault",
+  "version": "1.0.0",
+  "format": "diceframe:adventure-graph-v2",
+  "world_policy": "portable",
+  "recommended_world_id": "ashfell_ember",
+  "required_runtime": {
+    "id": "core:dnd2024",
+    "minimum_version": 1
+  },
+  "default_locale": "zh-CN",
+  "supported_locales": ["zh-CN"]
+}

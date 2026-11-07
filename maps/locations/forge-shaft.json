@@ -1,0 +1,17 @@
+{
+  "id": "forge_shaft",
+  "name": "熔炉斜井",
+  "world_id": "ashfell_ember",
+  "connected_to": [
+    "hall",
+    "forge"
+  ],
+  "content": "四十五度，铁梯锈但踩痕新。越下越热，有烧焦蜜的甜味。井壁五道一组抓痕朝上。",
+  "keywords": [
+    "斜井",
+    "铁梯",
+    "热风",
+    "抓痕"
+  ],
+  "tier": "background"
+}

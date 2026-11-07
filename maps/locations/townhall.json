@@ -1,0 +1,17 @@
+{
+  "id": "townhall",
+  "name": "镇务所",
+  "world_id": "ashfell_ember",
+  "connected_to": [
+    "tavern",
+    "mine_gate"
+  ],
+  "content": "1871 年矿脉让渡书双语。档案柜五份旧契约副本，清账方式写法各不同。墙上矿道图。",
+  "keywords": [
+    "镇务所",
+    "契约",
+    "塞德里克",
+    "档案"
+  ],
+  "tier": "background"
+}

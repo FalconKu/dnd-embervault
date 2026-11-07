@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "id": "ashfell-ember",
+  "name": "灰砧镇与余烬矿道",
+  "mode": "graph",
+  "worlds": [
+    "ashfell_ember"
+  ],
+  "default": true,
+  "nodes": [
+    {
+      "location_ref": "tavern",
+      "x": -26,
+      "y": 30
+    },
+    {
+      "location_ref": "townhall",
+      "x": -6,
+      "y": 34
+    },
+    {
+      "location_ref": "mine_gate",
+      "x": 18,
+      "y": 28
+    },
+    {
+      "location_ref": "tally_room",
+      "x": 30,
+      "y": 20
+    },
+    {
+      "location_ref": "hall",
+      "x": 34,
+      "y": 4
+    },
+    {
+      "location_ref": "forge_shaft",
+      "x": 22,
+      "y": -14
+    },
+    {
+      "location_ref": "forge",
+      "x": 8,
+      "y": -30
+    },
+    {
+      "location_ref": "seventh_slot",
+      "x": 8,
+      "y": -42
+    },
+    {
+      "location_ref": "vent",
+      "x": -6,
+      "y": -14
+    },
+    {
+      "location_ref": "deep_stone",
+      "x": -20,
+      "y": -30
+    }
+  ],
+  "default_view": {
+    "x": 0,
+    "y": 0,
+    "zoom": 1
+  }
+}

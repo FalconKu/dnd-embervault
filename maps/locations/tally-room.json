@@ -1,0 +1,17 @@
+{
+  "id": "tally_room",
+  "name": "值班室",
+  "world_id": "ashfell_ember",
+  "connected_to": [
+    "mine_gate",
+    "hall"
+  ],
+  "content": "矿道图羊皮，边角烧过。三条支线，一条断在「别去」。红笔标出三个圈。",
+  "keywords": [
+    "值班室",
+    "矿道图",
+    "红笔",
+    "圈"
+  ],
+  "tier": "background"
+}

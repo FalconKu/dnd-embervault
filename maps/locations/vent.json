@@ -1,0 +1,17 @@
+{
+  "id": "vent",
+  "name": "通风竖井",
+  "world_id": "ashfell_ember",
+  "connected_to": [
+    "hall",
+    "forge"
+  ],
+  "content": "可绕到熔炉背面避开灰壳。窄，只能侧身，有一段垂直。",
+  "keywords": [
+    "竖井",
+    "绕行",
+    "垂直",
+    "狭窄"
+  ],
+  "tier": "background"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "forge",
+  "name": "余烬厅熔炉",
+  "world_id": "ashfell_ember",
+  "connected_to": [
+    "forge_shaft",
+    "seventh_slot"
+  ],
+  "content": "炉壁刻满一百二十年名字，今年六个新刻。炉边一块拳头大的黑炭，炭里有字。炉前坐守炉者。",
+  "keywords": [
+    "熔炉",
+    "名字",
+    "黑炭",
+    "守炉者"
+  ],
+  "tier": "core"
+}

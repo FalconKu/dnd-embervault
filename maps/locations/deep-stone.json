@@ -1,0 +1,16 @@
+{
+  "id": "deep_stone",
+  "name": "矿脉深处石碑",
+  "world_id": "ashfell_ember",
+  "connected_to": [
+    "hall"
+  ],
+  "content": "矿道图上画到一半就断，写着「别去」。石碑刻着矮人离开时的原话。",
+  "keywords": [
+    "石碑",
+    "深处",
+    "矮人",
+    "别去"
+  ],
+  "tier": "background"
+}

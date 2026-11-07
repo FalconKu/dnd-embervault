@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "kind": "encounter_catalog",
+  "id": "embervault_encounters",
+  "source_ref": "diceframe-original:dnd-embervault",
+  "automation_level": "deterministic",
+  "presets": [
+    {
+      "id": "cinder_wights",
+      "difficulty": "standard",
+      "enemies": [
+        {
+          "id": "cinder-wight-1",
+          "profile_id": "cinder_wight",
+          "hp": 22,
+          "armor_class": 14,
+          "speed": 25,
+          "position": 30,
+          "initiative_modifier": 1,
+          "abilities": {"str": 14, "dex": 12, "con": 14, "int": 8, "wis": 10, "cha": 6},
+          "saving_throws": {"str": 2, "dex": 1, "con": 2, "int": -1, "wis": 0, "cha": -2},
+          "attacks": [
+            {"id": "furnace_touch", "attack_bonus": 4, "damage": "1d8+2", "damage_type": "fire", "range": 5, "long_range": 5}
+          ]
+        },
+        {
+          "id": "cinder-wight-2",
+          "profile_id": "cinder_wight",
+          "hp": 22,
+          "armor_class": 14,
+          "speed": 25,
+          "position": 35,
+          "initiative_modifier": 1,
+          "abilities": {"str": 14, "dex": 12, "con": 14, "int": 8, "wis": 10, "cha": 6},
+          "saving_throws": {"str": 2, "dex": 1, "con": 2, "int": -1, "wis": 0, "cha": -2},
+          "attacks": [
+            {"id": "furnace_touch", "attack_bonus": 4, "damage": "1d8+2", "damage_type": "fire", "range": 5, "long_range": 5}
+          ]
+        }
+      ]
+    }
+  ]
+}

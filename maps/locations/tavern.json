@@ -1,0 +1,17 @@
+{
+  "id": "tavern",
+  "name": "断镐酒馆",
+  "world_id": "ashfell_ember",
+  "connected_to": [
+    "mine_gate",
+    "townhall"
+  ],
+  "content": "梁上挂断镐，镐柄七个名字前六个磨平。玛拉擦杯口反复十几下。角落老奥托数到七就重来。",
+  "keywords": [
+    "酒馆",
+    "断镐",
+    "玛拉",
+    "奥托"
+  ],
+  "tier": "background"
+}

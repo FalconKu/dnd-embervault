@@ -1,0 +1,16 @@
+{
+  "id": "seventh_slot",
+  "name": "第七个空位",
+  "world_id": "ashfell_ember",
+  "connected_to": [
+    "forge"
+  ],
+  "content": "炉壁底部划了线，等着刻。尺寸正好一个人类名字的宽度。",
+  "keywords": [
+    "空位",
+    "刻线",
+    "布伦",
+    "宽度"
+  ],
+  "tier": "background"
+}
